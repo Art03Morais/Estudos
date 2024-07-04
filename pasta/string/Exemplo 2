@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	string nome1("Fulano");		// Inicializa nome1
+	string nome2("Beltrano");	// Inicializa nome2
+	string nome3, nome4;		// Não inicializa nome3 nem nome4
+
+	nome1[0] = nome2[0];		// Troca para "Bulano"
+	nome2[7] = 'a';			// Troca para "Beltrana"
+	cout << "Os dois primeiros nome são: " << nome1 << " e " << nome2 << endl;
+
+	cout << "O caractere 6 do segundo nome é: " << nome2[6] << endl;
+
+ return 0;
+ }
+
+ Assim como em C, C++ define o operador [..] para permitir o acesso a caracteres individuais dentro de uma string.
+
+	
