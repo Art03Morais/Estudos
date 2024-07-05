@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+// Função para trocar dois elementos
+void trocar(int &a, int &b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+// Implementação do Bubble Sort
+void bubbleSort(int arr[], int n) {
+    bool trocado;
+    do {
+        trocado = false;
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                trocar(arr[i], arr[i + 1]);
+                trocado = true;
+            }
+        }
+    } while (trocado);
+}
+
+int main() {
+    int arr[10];
+    int n = 0;
+
+    // Leitura dos valores de entrada
+    cout << "Digite até 10 números inteiros positivos (digite um número negativo para interromper):" << endl;
+    for (int i = 0; i < 10; i++) {
+        int num;
+        cin >> num;
+        if (num < 0) {
+            break;
+        }
+        arr[n++] = num;
+    }
+
+    // Ordenação do vetor usando Bubble Sort
+    bubbleSort(arr, n);
+
+    // Impressão dos valores ordenados
+    cout << "Valores ordenados:" << endl;
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
