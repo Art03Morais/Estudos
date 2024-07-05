@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+struct carro{
+		string nome;
+		string cor;
+		int pot;
+		int velMax;
+		int vel;
+		
+		void insere(string stnome, string stcor, int stpot, int stvelMax){
+			nome = stnome;
+			cor = stcor;
+			pot = stpot;
+			velMax = stvelMax;
+			vel = 0;
+		}
+		void mostra(){
+		cout<<nome<<endl;
+		cout<<cor<<endl;
+		cout<<pot<<endl;
+		cout<<velMax<<endl;	
+		cout<<vel<<endl;
+		}
+		void mudavel(int mv){
+			vel = mv;
+			if(vel > velMax){
+				vel=velMax;
+			}
+			if(vel < 0){
+				vel = 0;
+			}
+		}
+};	
+
+int main(){
+	
+	carro car1;
+	car1.insere("fuscao", "vermelho", 450, 350);
+	car1.mostra();
+
+	return 0;
+}
