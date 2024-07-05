@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+struct carro{
+		string nome;
+		string cor;
+		int pot;
+		int velMax;
+};	
+
+int main(){
+	
+	carro car1;
+	
+	car1.nome = "fuscao";
+	car1.cor = "vermelho";
+	car1.pot = 400;
+	car1.velMax = 350;
+
+cout<<car1.nome<<endl;
+cout<<car1.cor<<endl;
+cout<<car1.pot<<endl;
+cout<<car1.velMax<<endl;
+
+	return 0;
+}
